@@ -1,0 +1,10 @@
+name: image-to-model
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pip:
+      - bpy==4.5.4
+      - opencv-python
