@@ -22,3 +22,13 @@ Two-stage workflow to convert a 2D silhouette into geometry using Blender.
 ## Notes
 - If your Blender version differs, match `python` and `bpy` versions in `environment.yml`.
 - The Blender script starts from a clean scene (`read_factory_settings`) and deletes any existing objects.
+
+## Examples (docs folder)
+- Input (already binary in this sample, but non-binary images work; they will be thresholded): `docs/example_image.png`
+- Binarized mask: `docs/binary.png`
+- Extruded model views: `docs/model_image_1.png`, `docs/model_image_2.png`
+
+![Input](docs/example_image.png)
+![Binarized](docs/binary.png)
+![Model view 1](docs/model_image_1.png)
+![Model view 2](docs/model_image_2.png)
