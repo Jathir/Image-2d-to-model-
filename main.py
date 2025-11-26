@@ -7,11 +7,11 @@ from src.model_from_contours import build_model_from_contours
 @dataclass
 class PipelineConfig:
     """Configuration for the two-stage pipeline."""
-    source_image: Path = Path(r"Example\Example_image.png")
+    source_image: Path = Path(r"Example\example_image.png")
     output_dir: Path = Path("outputs")
     save_stl: Path = Path("outputs/model.stl")
     threshold: int = 180
-    blur: int = 3
+    blur: int = 1
     extrude_depth: float = 0.1  # extrusion thickness in Blender units
 
 def run_pipeline(config: PipelineConfig) -> None:

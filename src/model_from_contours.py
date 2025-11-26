@@ -73,8 +73,8 @@ def build_model_from_contours(
         if len(points) < 3:
             return
 
-        spline = curve_data.splines.new("BEZIER")
-        spline.bezier_points.add(len(points) - 1)
+        spline = curve_data.splines.new("POLY")
+        spline.points.add(len(points) - 1)
 
         for i, (x, y) in enumerate(points):
             u = x / (width - 1)
@@ -82,10 +82,7 @@ def build_model_from_contours(
             xw = (u - 0.5) * scale
             yw = (0.5 - v) * scale
 
-            bp = spline.bezier_points[i]
-            bp.co = (xw, yw, 0.0)
-            bp.handle_left_type = 'AUTO'
-            bp.handle_right_type = 'AUTO'
+            spline.points[i].co = (xw, yw, 0.0, 1.0)
 
         spline.use_cyclic_u = True
 
