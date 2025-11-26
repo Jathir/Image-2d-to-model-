@@ -10,7 +10,7 @@ def build_model_from_contours(
     extrude_depth: float = 0.1,
     scale: float = 2.0,
     save_stl: Path | None = None,
-    bezier_step: int = 3,
+    bezier_step: int = 1,
 ) -> None:
     """Load contour data, create Bezier curves, and export an STL inside Blender.
 
